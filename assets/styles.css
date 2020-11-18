@@ -1,0 +1,134 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    font-weight: 400;
+    color: #fff;
+    background: linear-gradient(45deg, #474747, #242424);
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+    position: relative;
+  }
+
+  .text {
+      color: #fff;
+  }
+  .text--center {
+      text-align: center;
+  }
+  .text--thin {
+      font-weight: 100;
+  }
+
+  .home-container {
+      padding: 30px;
+  }
+
+  .link {
+      text-decoration: underline;
+      color: #fff;
+      font-weight: 100;
+  }
+
+  .heading {
+    position: absolute;
+    font-weight: 100;
+    left: 0;
+    right: 0;
+    top: 20px;
+    z-index: 100;
+  }
+
+  .footer {
+    position: absolute;
+    font-weight: 100;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 100;
+  }
+
+  /* Astronaut in Orbit Start */
+  #welcome-section {
+    background-color: rgb(8, 8, 8);
+    color: #fff;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+#earth {
+    width: 35%;
+    background-color: #001740;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+    left: 32%;
+    box-shadow: 0 0 30px #b8d2ff;
+    z-index: 3;
+}
+
+#astronaut {
+    position: absolute;
+    z-index: 4;
+    height: 203px;
+    top: 36%;
+    left: 41%;
+    transform-origin: 50% 50%;
+    animation: float-in-space 10s linear infinite;
+}
+@media (max-width: 768px) {
+    #earth {
+        width: 75%;
+        left: 10%;
+    }
+    #astronaut {
+        height: 137px;
+        top: 45%;
+        left: 34%;
+    }
+}
+@media (max-width: 425px) {
+    #earth {
+        width: 80%;
+        left: 10%;
+    }
+    #astronaut {
+        height: 137px;
+        top: 38%;
+        left: 34%;
+    }
+}
+#map {
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+}
+@keyframes float-in-space {
+    0% {transform: translateX(0px) translateY(0px) rotate(0deg);}
+    25% {transform: translateX(5px) translateY(5px) rotate(-5deg);}
+    50% {transform: translateX(0px) translateY(0px) rotate(0deg);}
+    75% {transform: translateX(-5px) translateY(-5px) rotate(5deg);}
+    100% {transform: translateX(0x) translateY(0px) rotate(0deg);}
+}
+.triangle {
+    background-color: #fff;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    transition: all 50s linear;
+    animation: star-glow 1s ease-in-out infinite;
+}
+@keyframes star-glow {
+    0% {box-shadow: 0 0 1px #fff;}
+    20% {box-shadow: 0 0 8px #fff;}
+    80% {box-shadow: 0 0 8px #fff;}
+    100% {box-shadow: 0 0 1px #fff;}
+}
+
+  /* Astronaut in Orbit Start */
