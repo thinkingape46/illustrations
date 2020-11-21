@@ -11,6 +11,16 @@
         body {
             font-family: 'roboto', sans-serif;
         }
+        .heading {
+            position: absolute;
+            font-weight: 100;
+            left: 50%;
+            transform: translateX(-50%);
+            right: 0;
+            top: 20px;
+            z-index: 100;
+            width: max-content;
+        }
         .index__button {
             position: absolute;
             display: flex;
@@ -65,7 +75,7 @@
     </style>
 </head>
 <body>
-    <button class="index__button"><a class="index__link" href="index.html">Index Page</a></button>
+    <button class="index__button"><a class="index__link" href="/">Index Page</a></button>
     <h3 class="text text--center heading">Astronaut in Orbit</h3>
     <section id="welcome-section">
 		<div id="earth">			
